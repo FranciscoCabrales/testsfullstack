@@ -1,10 +1,9 @@
 package com.example.demo.models;
 
-import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "user")
+@Table (name = "person")
 public class UserModel {
 
     @Id
@@ -12,22 +11,29 @@ public class UserModel {
     @Column(unique = true,nullable = false)
     private Long id;
     private String name;
-    private String email;
-    private int age;
+    private String apellido;
+    private String puesto;
+    private int sueldo;
     public Long getId() {
         return id;
     }
-    public int getAge() {
-        return age;
+    public int getSueldo() {
+        return sueldo;
     }
-    public void setAge(int age) {
-        this.age = age;
+    public void setSueldo(int sueldo) {
+        this.sueldo = sueldo;
     }
-    public String getEmail() {
-        return email;
+    public String getPuesto() {
+        return puesto;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+    public String getApellido() {
+        return apellido;
+    }
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
     public String getName() {
         return name;
